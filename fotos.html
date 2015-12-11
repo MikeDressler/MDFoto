@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="with=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/blueimp-gallery.min.css">
+	<title> Fotos </title>
+</head>
+
+<body>
+<div style="padding-left: calc(100vw - 100%);">
+
+<div class="container">
+		<img src="images/MD11.jpg" class="img-responsive">
+</div>
+	
+	
+	<div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Navigation ein-/ausblenden</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">MD FOTO</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">WILLKOMMEN</a></li>
+                <li><a href="uebermich.html">ÜBER MICH</a></li>
+                <li class="active"><a href="fotos.html">FOTOS</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+
+
+<div class="container">
+	<div id="blueimp-gallery" class="blueimp-gallery">
+	    <div class="slides"></div>
+	    <h3 class="title"></h3>
+	    <a class="prev">‹</a>
+	    <a class="next">›</a>
+	    <a class="close">×</a>
+	    <a class="play-pause"></a>
+	    <ol class="indicator"></ol>
+	</div>
+
+
+
+	<div id="links">
+	    <a href="images/MD01.jpg" title="Banana">
+	        <img src="images/thumbnails/MD01.jpg" alt="Banana">
+	    </a>
+	    <a href="images/MD02.jpg" title="Apple">
+	        <img src="images/thumbnails/MD02.jpg" alt="Apple">
+	    </a>
+	    <a href="images/MD03.jpg" title="Orange">
+	        <img src="images/thumbnails/MD03.jpg" alt="Orange">
+	    </a>
+	    <a href="images/MD04.jpg" title="Orange">
+	        <img src="images/thumbnails/MD04.jpg" alt="Orange">
+	    </a>
+		<a href="images/MD05.jpg" title="Orange">
+	        <img src="images/thumbnails/MD05.jpg" alt="Orange">
+	    </a>
+		<a href="images/MD06.jpg" title="Banana">
+	        <img src="images/thumbnails/MD06.jpg" alt="Banana">
+	    </a>
+	    <a href="images/MD07.jpg" title="Apple">
+	        <img src="images/thumbnails/MD07.jpg" alt="Apple">
+	    </a>
+	    <a href="images/MD08.jpg" title="Orange">
+	        <img src="images/thumbnails/MD08.jpg" alt="Orange">
+	    </a>
+	    <a href="images/MD09.jpg" title="Orange">
+	        <img src="images/thumbnails/MD09.jpg" alt="Orange">
+	    </a>
+		<a href="images/MD10.jpg" title="Orange">
+	        <img src="images/thumbnails/MD10.jpg" alt="Orange">
+	    </a>
+
+	</div>
+
+	<script>
+	document.getElementById('links').onclick = function (event) {
+	    event = event || window.event;
+	    var target = event.target || event.srcElement,
+	        link = target.src ? target.parentNode : target,
+	        options = {index: link, event: event},
+	        links = this.getElementsByTagName('a');
+	    blueimp.Gallery(links, options);
+	};
+	</script>
+</div>
+
+	<div class="container">
+	<footer>
+        <p class="pull-right"><a href="#">Zurück nach oben</a></p>
+        <p>&copy; 2015 MD Foto &middot; <a href="#">Datenschutz</a> &middot; <a href="#">AGB</a></p>
+	</footer>
+	</div>
+
+	<script src="js/blueimp-gallery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</div>
+
+</body>
+
+</html>
